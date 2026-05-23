@@ -1,0 +1,11 @@
+# Office files
+*.docx
+*.pptx
+*.xlsx
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
