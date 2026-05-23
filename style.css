@@ -319,6 +319,57 @@ section { padding: 7rem 3rem; position: relative; }
 .badge-teal  { background: rgba(13,148,136,0.12); color: var(--teal);  border: 1px solid rgba(13,148,136,0.2); }
 .badge-amber { background: rgba(245,158,11,0.1);  color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
 
+/* ── Callout — 핵심 질문 ── */
+.callout-section {
+  background: var(--navy3);
+  border-top: 1px solid rgba(37,99,235,0.15);
+  border-bottom: 1px solid rgba(37,99,235,0.15);
+  padding: 5rem 3rem;
+}
+.callout-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.callout-label {
+  font-family: var(--font-mono); font-size: 0.68rem;
+  color: var(--cyan); letter-spacing: 0.2em; margin-bottom: 1.25rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+}
+.callout-label::before,
+.callout-label::after { content: ''; width: 1.5rem; height: 1px; background: var(--cyan); }
+.callout-question {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;
+  margin-bottom: 2.5rem;
+}
+.callout-contrast {
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+  margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.callout-col { flex: 1; min-width: 180px; max-width: 260px; border-radius: 0.5rem; padding: 1.25rem 1.5rem; text-align: left; }
+.callout-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+.callout-col ul li { font-size: 0.83rem; padding-left: 0.8rem; position: relative; line-height: 1.5; }
+.callout-col ul li::before { content: '–'; position: absolute; left: 0; }
+.callout-col-label { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; font-weight: 600; }
+.callout-no {
+  background: rgba(220,38,38,0.06); border: 1px solid rgba(220,38,38,0.2);
+}
+.callout-no .callout-col-label { color: #f87171; }
+.callout-no ul li { color: var(--gray2); }
+.callout-no ul li::before { color: #f87171; }
+.callout-yes {
+  background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.25);
+}
+.callout-yes .callout-col-label { color: var(--blue2); }
+.callout-yes ul li { color: var(--gray1); }
+.callout-yes ul li::before { color: var(--blue2); }
+.callout-arrow {
+  font-family: var(--font-display); font-size: 1.8rem; color: var(--blue2);
+  flex: 0 0 auto; opacity: 0.7;
+}
+.callout-answer {
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+  color: var(--blue2); letter-spacing: 0.01em;
+}
+
 /* ── Market ── */
 #market { background: var(--navy); }
 .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
@@ -333,6 +384,32 @@ section { padding: 7rem 3rem; position: relative; }
 .market-stat-val { font-family: var(--font-display); font-size: 2.8rem; font-weight: 800; color: var(--white); line-height: 1; margin-bottom: 0.5rem; }
 .market-stat-val em { color: var(--blue2); font-style: normal; }
 .market-stat-label { font-size: 0.85rem; color: var(--gray2); line-height: 1.5; font-weight: 300; }
+/* ── Market drivers ── */
+.market-drivers {
+  background: var(--navy3); border: 1px solid rgba(37,99,235,0.12);
+  border-radius: 0.75rem; padding: 1.5rem 2rem; margin-bottom: 3rem;
+}
+.market-drivers-label {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--cyan); letter-spacing: 0.15em; margin-bottom: 1rem;
+}
+.market-drivers-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+}
+.driver-item {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+}
+.driver-num {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--blue2); background: rgba(37,99,235,0.1);
+  border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 0.2rem; padding: 0.15rem 0.4rem;
+  flex: 0 0 auto; line-height: 1.4;
+}
+.driver-text {
+  font-size: 0.8rem; color: var(--gray2); line-height: 1.5; font-weight: 300;
+}
+
 .market-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .market-card {
   background: var(--navy3); border: 1px solid rgba(255,255,255,0.05);
@@ -363,6 +440,84 @@ section { padding: 7rem 3rem; position: relative; }
   font-family: var(--font-mono); font-size: 0.62rem; padding: 0.2rem 0.55rem;
   background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.15);
   color: var(--gray1); border-radius: 0.2rem;
+}
+
+/* ── Job — definition / duties / KSA ── */
+.job-definition {
+  background: var(--navy3); border: 1px solid rgba(37,99,235,0.18);
+  border-left: 3px solid var(--blue2);
+  border-radius: 0.5rem; padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.job-def-badge {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  color: var(--cyan); letter-spacing: 0.15em; margin-bottom: 0.75rem;
+}
+.job-def-text {
+  font-size: 1rem; color: var(--gray1); line-height: 1.65; margin-bottom: 1rem;
+}
+.job-def-text strong { color: var(--white); font-weight: 600; }
+.job-def-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.job-field-tag {
+  font-family: var(--font-mono); font-size: 0.65rem; padding: 0.25rem 0.7rem;
+  background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.25);
+  color: var(--blue2); border-radius: 999px; letter-spacing: 0.04em;
+}
+
+.job-duties {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem;
+}
+.duty-card {
+  background: var(--navy3); border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 0.5rem; padding: 1.5rem; transition: border-color 0.3s, transform 0.2s;
+}
+.duty-card:hover { border-color: rgba(37,99,235,0.3); transform: translateY(-3px); }
+.duty-num {
+  font-family: var(--font-mono); font-size: 0.65rem; color: var(--blue2);
+  letter-spacing: 0.1em; margin-bottom: 0.75rem;
+}
+.duty-title {
+  font-family: var(--font-display); font-size: 0.92rem; font-weight: 700;
+  margin-bottom: 0.6rem; line-height: 1.3;
+}
+.duty-desc { font-size: 0.78rem; color: var(--gray2); line-height: 1.6; font-weight: 300; }
+
+.ksa-section {
+  background: var(--navy3); border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 0.75rem; padding: 2rem; margin-bottom: 1rem;
+}
+.ksa-label {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--cyan); letter-spacing: 0.2em; margin-bottom: 1.25rem;
+}
+.ksa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.ksa-card { border-radius: 0.4rem; padding: 1.25rem; border: 1px solid; }
+.ksa-k { background: rgba(37,99,235,0.05);  border-color: rgba(37,99,235,0.2); }
+.ksa-s { background: rgba(13,148,136,0.05); border-color: rgba(13,148,136,0.2); }
+.ksa-a { background: rgba(245,158,11,0.04); border-color: rgba(245,158,11,0.18); }
+.ksa-type {
+  font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.12em;
+  font-weight: 600; margin-bottom: 0.75rem;
+}
+.ksa-k .ksa-type { color: var(--blue2); }
+.ksa-s .ksa-type { color: var(--teal); }
+.ksa-a .ksa-type { color: var(--amber); }
+.ksa-items { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.ksa-items li { font-size: 0.8rem; color: var(--gray1); padding-left: 0.8rem; position: relative; line-height: 1.45; }
+.ksa-items li::before { content: '·'; position: absolute; left: 0; }
+.ksa-k .ksa-items li::before { color: var(--blue2); }
+.ksa-s .ksa-items li::before { color: var(--teal); }
+.ksa-a .ksa-items li::before { color: var(--amber); }
+.ksa-preferred { margin-top: 0.5rem; }
+.ksa-pref-label {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  color: var(--gray3); letter-spacing: 0.12em; margin-bottom: 0.6rem;
+}
+.ksa-pref-items { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.ksa-pref-tag {
+  font-family: var(--font-mono); font-size: 0.62rem; padding: 0.2rem 0.6rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  color: var(--gray2); border-radius: 0.2rem;
 }
 
 /* ── Spec ── */
@@ -493,7 +648,12 @@ footer {
   .team-grid    { grid-template-columns: 1fr; }
   .market-grid  { grid-template-columns: 1fr; }
   .market-cards { grid-template-columns: 1fr; }
+  .market-drivers-grid { grid-template-columns: 1fr 1fr; }
   .job-grid     { grid-template-columns: 1fr; }
+  .job-duties   { grid-template-columns: 1fr 1fr; }
+  .ksa-grid     { grid-template-columns: 1fr; }
+  .callout-contrast { flex-direction: column; align-items: center; }
+  .callout-arrow { transform: rotate(90deg); }
   .roadmap-track { grid-template-columns: 1fr; }
   .roadmap-track::before { display: none; }
   .swot-grid    { grid-template-columns: 1fr; }
