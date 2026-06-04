@@ -246,6 +246,8 @@ section { padding: 7rem 3rem; position: relative; }
 .video-player-wrap {
   position: relative; background: #000;
   border-top: 1px solid rgba(37,99,235,0.1);
+  overflow: hidden;
+  isolation: isolate;
 }
 .video-player {
   width: 100%; display: block;
@@ -743,8 +745,16 @@ footer {
   .achieve-grid  { grid-template-columns: repeat(2,1fr); }
   .callout-contrast { flex-direction: column; align-items: center; }
   .callout-arrow { transform: rotate(90deg); }
-  .roadmap-track { grid-template-columns: 1fr; }
+  .roadmap-track { grid-template-columns: 1fr; gap: 1rem; }
   .roadmap-track::before { display: none; }
+  .road-step {
+    align-items: flex-start; text-align: left;
+    padding: 1.25rem 1.5rem;
+    background: var(--navy3); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 0.6rem;
+  }
+  .road-dot { margin-bottom: 1rem; }
+  .road-items { text-align: left; }
   .swot-grid     { grid-template-columns: 1fr; }
   .swot-strat-grid { grid-template-columns: 1fr; }
   .spec-panel.active { grid-template-columns: 1fr; }
