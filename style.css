@@ -249,7 +249,8 @@ section { padding: 7rem 3rem; position: relative; }
 }
 .video-player {
   width: 100%; display: block;
-  aspect-ratio: 16/9; object-fit: contain;
+  aspect-ratio: 16/9;
+  border: none;
 }
 
 /* ════ CALLOUT ════ */
