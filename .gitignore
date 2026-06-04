@@ -3,6 +3,9 @@
 *.pptx
 *.xlsx
 
+# Large video files (exceed GitHub 100MB limit)
+video/
+
 # Claude Code
 .claude/
 
